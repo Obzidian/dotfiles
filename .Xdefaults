@@ -1,0 +1,83 @@
+URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+ 
+URxvt.keysym.M-x           : perl:keyboard-select:activate
+URxvt.keysym.M-u           : perl:url-select:select_next
+URxvt.keysym.M-c           : perl:clipboard:copy
+URxvt.keysym.M-v           : perl:clipboard:paste
+URxvt.keysym.M-s           : perl:keyboard-select:search
+URxvt.keysym.M-C-v         : perl:clipboard:paste_escaped
+URxvt.url-select.launcher  : firefox
+URxvt.url-select.autocopy  : true
+URxvt.url-select.underline : true
+ 
+URxvt.geometry  : 145x43
+ 
+URxvt.font        : xft:DejaVu Sans Mono for Powerline:pixelsize=20
+URxvt.letterSpace : 0
+URxvt.termName    : rxvt-256color
+URxvt.iso14755    : true
+URxvt*depth: 32
+URxvt.foreground: 15
+ 
+URxvt.urgentOnBell: true
+ 
+URxvt.saveLines   : 12000
+URxvt.scrollBar   : false
+URxvt.scrollstyle : rxvt
+ 
+!XFT
+Xft.lcdfilter : lcddefault
+Xft.hintstyle : hintslight
+Xft.hinting   : true
+Xft.antialias : true
+Xft.rgba      : rgb
+ 
+!Solarized + tangerine + random colours
+URxvt.cursorColor            : #93A1A1
+URxvt*cursorBlink:      true
+ 
+URxvt.pointerColorBackground : #586E75
+URxvt.urlLuncher:     /usr/bin/iceweasel
+URxvt.pointerColorForeground : #93A1A1
+ 
+URxvt.Depth : 32
+##URxvt.background : #404040
+URxvt*background : rgba:0000/0000/0200/c800
+URxvt.foreground : #F6F3E8
+#URxvt*.transparent  : True
+#URxvt*.shading: 20
+ 
+URxvt.colorBD : #FFFFFF
+URxvt.colorUL : #CCCC66
+ 
+! black
+URxvt.color0  : #2E3436
+URxvt.color8  : #555753
+ 
+! red
+URxvt.color1  : #9e1828
+URxvt.color9  : #cf6171
+ 
+! green
+URxvt.color2  : #aece92
+URxvt.color10 : #c5f779
+ 
+! yellow
+URxvt.color3  : #968a38
+URxvt.color11 : #fff796
+ 
+! blue
+URxvt.color4  : #414171
+URxvt.color12 : #4186be
+ 
+! magenta
+URxvt.color5  : #963c59
+URxvt.color13 : #cf9ebe
+ 
+! cyan
+URxvt.color6  : #418179
+URxvt.color14 : #71bebe
+ 
+! white
+URxvt.color7  : #bebebe
+URxvt.color15 : #ffffff
