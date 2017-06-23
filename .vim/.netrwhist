@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/var/tmp/portage/sys-apps/man-db-2.6.6/work'
 let g:netrw_dirhist_2='/home/jonas/Dropbox/Work/Notes'
+let g:netrw_dirhist_3='/home/obzidian/Projects/DevcampPortfolio'
+let g:netrw_dirhist_4='/home/obzidian/Projects/DevcampPortfolio/bin'
+let g:netrw_dirhist_5='/home/obzidian/Projects/DevcampPortfolio'
+let g:netrw_dirhist_6='/home/obzidian/Projects/DevcampPortfolio/app'
+let g:netrw_dirhist_7='/home/obzidian/Projects/DevcampPortfolio/app/views'
+let g:netrw_dirhist_8='/home/obzidian/Projects/DevcampPortfolio/app/views/pages'

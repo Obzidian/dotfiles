@@ -12,9 +12,15 @@ filetype indent on
 filetype plugin on
 syntax enable
 
+" Powerline
+"let g:Powerline_symbols = 'fancy'
+
 " Omnisharp
 let g:Omnisharp_stop_server = 0
 let g:OmniSharp_host = "http://localhost:2000"
+
+" Javascript Libraries Syntax Highlighting
+" let g:used_javascript_libs ='jquery,angularjs,angularui,angularuirouter,react'
 
 
 " Get Code Issues and syntax errors
@@ -77,7 +83,7 @@ if has('gui_running')
    set guioptions-=r            "remove right scrollbar
    set guioptions-=b            "remove bottom scrollbar
    set guioptions-=L            "remove left scrollbar
-   set guifont=Terminus\ 10.5     "set gui font
+   set guifont=Inconsolata\ 13     "set gui font
    set guicursor+=a:block-blinkon1
    colorscheme torte
    " Paste from PRIMARY and CLIPBOARD
