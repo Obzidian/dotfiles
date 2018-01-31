@@ -13,37 +13,86 @@ filetype plugin on
 syntax enable
 
 " Powerline
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_dividers_override = ["\Ue0b0","\Ue0b1","\Ue0b2","\Ue0b3"]
+let g:Powerline_symbols_override = {'BRANCH': "\Ue0a0", 'LINE': "\Ue0a1", 'RO': "\Ue0a2"}
+
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
+
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+endif
+
+" unicode symbols
+
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" Airline Themes
+let g:airline_theme='kolor'
+colorscheme kolor
+
+"let g:airline_theme='molokai'
+"colorscheme molokai
 
 " Omnisharp
-let g:Omnisharp_stop_server = 0
-let g:OmniSharp_host = "http://localhost:2000"
+"let g:Omnisharp_stop_server = 0
+"let g:OmniSharp_host = "http://localhost:2000"
 
 " Javascript Libraries Syntax Highlighting
 " let g:used_javascript_libs ='jquery,angularjs,angularui,angularuirouter,react'
 
+" Syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+"let g:syntastic_python_checkers = ['pylint']
 
 " Get Code Issues and syntax errors
-let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+" let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 
-augroup omnisharp_commands
-   autocmd!
+"augroup omnisharp_commands
+"   autocmd!
    "Set autocomplete function to OmniSharp (if not using YouCompleteMe "completion plugin)
-   autocmd FileType cs setlocal omnifunc=OmniSharp#Complete        
+"   autocmd FileType cs setlocal omnifunc=OmniSharp#Complete        
 
-   autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
+"   autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
    " Synchronous build (blocks Vim)
    "autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
    " Builds can also run asynchronously with vim-dispatch installed
-   autocmd FileType cs nnoremap <leader>b :wa!<cr>:OmniSharpBuildAsync<cr>
-   autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+"   autocmd FileType cs nnoremap <leader>b :wa!<cr>:OmniSharpBuildAsync<cr>
+"   autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
           
    " Automatically add new cs files to the nearest project on save
-   autocmd BufWritePost *.cs call OmniSharp#AddToProject()
+"   autocmd BufWritePost *.cs call OmniSharp#AddToProject()
            
    "show type information automatically when the cursor stops moving
-   autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-augroup END
+"   autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+"augroup END
 
 " General
 set background=dark             "dark background"
