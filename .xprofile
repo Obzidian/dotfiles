@@ -1,0 +1,8 @@
+#!/bin/sh
+
+xrdb /home/obzidian/.Xresources &
+setbg &
+xcompmgr &
+dunst &
+xset r rate 300 50 &
+unclutter &
